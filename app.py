@@ -20,7 +20,7 @@ def get_pet_resource():
 
 
 @app.route('/', methods = ['PUT'])
-@swag_from('yml/post.yml')
+@swag_from('yml/put.yml')
 def update_pet_resource():
     val = request.json
     for column in request.json.keys():
