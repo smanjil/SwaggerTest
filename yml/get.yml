@@ -1,0 +1,30 @@
+	This is the pet database API to get the list of pets
+        Call this api to get the list of all pets available.
+        ---
+        tags:
+            - Pet Database API
+        responses:
+            500:
+                description: Error All pets are angry!
+            200:
+                description: List of pets!
+                schema:
+                    id: Pet
+                    properties:
+                        id:
+                            type: integer
+                            description: identification number of pet
+                        name:
+                            type: string
+                            description: name of pet
+                        species:
+                            type: string
+                            description: breed of pet
+                        gender:
+                            type: string
+                            description: gender of pet
+                        birthday:
+                            type: string or datetime object
+                            description: date of birth of pet
+            404:
+                description: Error, wrong route!

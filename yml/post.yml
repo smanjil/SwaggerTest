@@ -1,0 +1,12 @@
+	This is the pet database API to update pet information
+        Call this api to update any or all information of a pet.
+        ---
+        tags:
+            - Pet Database API
+        responses:
+            500:
+                description: Error All pets are angry!
+            200:
+                description: Pet successfully updated!
+            404:
+                description: Error, wrong route!
