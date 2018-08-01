@@ -1,14 +1,15 @@
 
-from flask import Flask, request, jsonify
-import pymysql
-from flasgger import Swagger
+from flask import (
+	request,
+        jsonify
+)
 from flasgger.utils import swag_from
 
-db = pymysql.connect('localhost', 'root', '123', 'petdb')
-cur = db.cursor()
-
-app = Flask(__name__)
-Swagger(app)
+from config import (
+	app,
+	db,
+	cur
+)
 
 
 @app.route('/', methods = ['GET'])
